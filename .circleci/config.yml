@@ -1,3 +1,3 @@
 version: 2.1
 
-restore_freshly
+restore_freshly_gem_cache: &restore_freshly_gem_ca
