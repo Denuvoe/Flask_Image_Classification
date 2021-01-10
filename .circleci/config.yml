@@ -3,4 +3,5 @@ version: 2.1
 restore_freshly_gem_cache: &restore_freshly_gem_cache
   restore_cache:
     keys:
-      - freshly-gems-v1.338-{{ chec
+      - freshly-gems-v1.338-{{ checksum "Gemfile.lock" }}
+      - freshly-ge
