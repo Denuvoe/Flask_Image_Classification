@@ -6,4 +6,6 @@ restore_freshly_gem_cache: &restore_freshly_gem_cache
       - freshly-gems-v1.338-{{ checksum "Gemfile.lock" }}
       - freshly-gems-v1.338-
 
-bundle_install:
+bundle_install: &bundle_install
+  run:
+    name: Bund
