@@ -8,4 +8,6 @@ restore_freshly_gem_cache: &restore_freshly_gem_cache
 
 bundle_install: &bundle_install
   run:
-    name: Bund
+    name: Bundle Install
+    command: |
+      bun
