@@ -10,4 +10,4 @@ bundle_install: &bundle_install
   run:
     name: Bundle Install
     command: |
-      bun
+      bundle check || bundle install --dep
