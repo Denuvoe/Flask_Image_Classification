@@ -10,4 +10,6 @@ bundle_install: &bundle_install
   run:
     name: Bundle Install
     command: |
-      bundle check || bundle install --dep
+      bundle check || bundle install --deployment --frozen
+
+save_freshly_ge
