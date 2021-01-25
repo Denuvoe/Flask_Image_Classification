@@ -12,4 +12,6 @@ bundle_install: &bundle_install
     command: |
       bundle check || bundle install --deployment --frozen
 
-save_freshly_gem_cache: &save_freshly_gem_cac
+save_freshly_gem_cache: &save_freshly_gem_cache
+  save_cache:
+    key: fres
