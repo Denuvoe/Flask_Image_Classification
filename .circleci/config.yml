@@ -22,4 +22,5 @@ create_and_load_db: &create_and_load_db
   run:
     name: Create and Load DB
     command: |
-      RAILS_ENV=test bundle exec rake db:cre
+      RAILS_ENV=test bundle exec rake db:create --trace
+      RAILS_ENV=test bun
