@@ -25,4 +25,6 @@ create_and_load_db: &create_and_load_db
       RAILS_ENV=test bundle exec rake db:create --trace
       RAILS_ENV=test bundle exec rake db:schema:load --trace
 
-exec
+executors:
+  ruby_and_services:
+    
