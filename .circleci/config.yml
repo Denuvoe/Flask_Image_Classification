@@ -28,4 +28,6 @@ create_and_load_db: &create_and_load_db
 executors:
   ruby_and_services:
     docker:
-      - image: freshlyci/circle-base:r
+      - image: freshlyci/circle-base:ruby-2.7.4-node-14.17.4
+        environment:
+     
