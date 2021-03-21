@@ -33,4 +33,5 @@ executors:
           PGHOST: 127.0.0.1
           DATABASE_USER: postgres
       - image: circleci/redis:latest
-      - image: c
+      - image: circleci/postgres
+        environment
