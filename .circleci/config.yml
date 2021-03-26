@@ -35,4 +35,5 @@ executors:
       - image: circleci/redis:latest
       - image: circleci/postgres
         environment:
-          POSTGRES_USER: p
+          POSTGRES_USER: postgres
+          POSTGRES_DB: test_d
