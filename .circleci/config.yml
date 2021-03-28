@@ -36,4 +36,5 @@ executors:
       - image: circleci/postgres
         environment:
           POSTGRES_USER: postgres
-          POSTGRES_DB: test_d
+          POSTGRES_DB: test_database
+          POSTGRES_HOST_AUTH_METHOD: 
