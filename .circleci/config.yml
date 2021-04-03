@@ -41,3 +41,5 @@ executors:
       - image: memcached:latest
 
 jobs:
+  rspec_units:
+    executor: ruby_and_services
