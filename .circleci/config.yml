@@ -43,3 +43,6 @@ executors:
 jobs:
   rspec_units:
     executor: ruby_and_services
+    steps:
+      - checkout
+      - *rest
