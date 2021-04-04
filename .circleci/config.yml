@@ -50,3 +50,5 @@ jobs:
       - *save_freshly_gem_cache
       - *create_and_load_db
       - run:
+          name: RSPEC
+          command: 
