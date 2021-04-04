@@ -48,4 +48,5 @@ jobs:
       - *restore_freshly_gem_cache
       - *bundle_install
       - *save_freshly_gem_cache
-    
+      - *create_and_load_db
+      - run:
