@@ -45,4 +45,5 @@ jobs:
     executor: ruby_and_services
     steps:
       - checkout
-      - *rest
+      - *restore_freshly_gem_cache
+      - *bundle_inst
