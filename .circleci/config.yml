@@ -46,4 +46,6 @@ jobs:
     steps:
       - checkout
       - *restore_freshly_gem_cache
-      - *bundle_inst
+      - *bundle_install
+      - *save_freshly_gem_cache
+    
