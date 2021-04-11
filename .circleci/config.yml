@@ -51,4 +51,5 @@ jobs:
       - *create_and_load_db
       - run:
           name: RSPEC
-          command: 
+          command: |
+            echo "About to 
