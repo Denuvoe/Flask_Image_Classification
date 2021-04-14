@@ -55,4 +55,6 @@ jobs:
             echo "About to run the following specs:"
             bundle exec rspec
 
-workflo
+workflows:
+  version: 2
+  build_and_tes
