@@ -7,4 +7,4 @@
 ## Any additional background context you want to provide?
 
 <!--- Describe your changes in detail -->
-<!--- Please a
+<!--- Please add as much detail in this and the following
