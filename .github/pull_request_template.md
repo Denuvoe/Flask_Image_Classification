@@ -25,4 +25,4 @@
 
 ## Types of changes
 
-<!--- What types of changes does yo
+<!--- What types of changes does your code introduce? Put an `x` in a
