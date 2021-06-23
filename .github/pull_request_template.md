@@ -26,4 +26,4 @@
 ## Types of changes
 
 <!--- What types of changes does your code introduce? Put an `x` in all the boxes that apply: -->
-- [ ] Bug fix (non-br
+- [ ] Bug fix (non-breaking change which fixes an i
