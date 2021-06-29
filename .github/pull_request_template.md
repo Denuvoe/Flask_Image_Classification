@@ -31,3 +31,6 @@
 - [ ] Breaking change (fix or feature that would cause existing functionality to not work as expected).
 
 ## Checklist
+
+- [ ] I have updated the changelog
+- [ ]
