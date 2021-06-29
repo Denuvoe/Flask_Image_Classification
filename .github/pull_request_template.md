@@ -33,4 +33,5 @@
 ## Checklist
 
 - [ ] I have updated the changelog
+- [ ] I have tested this myself.
 - [ ]
