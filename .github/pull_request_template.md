@@ -34,4 +34,4 @@
 
 - [ ] I have updated the changelog
 - [ ] I have tested this myself.
-- [ ]
+- [ ] I have added all necessary labels (WIP, re
