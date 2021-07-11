@@ -35,4 +35,4 @@
 - [ ] I have updated the changelog
 - [ ] I have tested this myself.
 - [ ] I have added all necessary labels (WIP, review, etc).
-- [ ] I have cleaned up redundant template boilerplate from th
+- [ ] I have cleaned up redundant template boilerplate from this PR description.
