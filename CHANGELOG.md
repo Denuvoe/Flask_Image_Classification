@@ -26,3 +26,44 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [v.0.4.1] - 2020-06-03
 
 ## Fixed
+- Fixes CreateRecords controller not handling factory attributes correctly.
+
+
+## [v.0.4.0] - 2020-06-01
+
+## Added
+- createRecords action now allows creation of multiple records.([#18](github.com/Freshly/stockpot/pull/18/) [dapperDerek])
+- Records controller now allow for multiple calls to the same model, effectively returning the correct data.([#18](github.com/Freshly/stockpot/pull/18/) [victorFSL])
+- Better error handling, that specifies the model and property that did not pass validation.([#18](github.com/Freshly/stockpot/pull/18/) [victorFSL])
+- Add support for querying all keys stored in redis.([#16](https://github.com/Freshly/stockpot/pull/16) [brianharman])
+
+## Fixed
+
+- Validation is now triggering correctly and rolling back any changes within the call.([#18](github.com/Freshly/stockpot/pull/18/) [victorFSL])
+- The create#records now returns based on Ids instead of relying on a specific record order.([#18](github.com/Freshly/stockpot/pull/18/) [victorFSL])
+- No more stubbing FactoryBot, there is a method that exposes the class name.([#18](github.com/Freshly/stockpot/pull/18/) [victorFSL])
+
+## [v0.3.1] - 2020-04-06
+
+### Added
+- Fixes the endpoint not working on CI. This is not triggered locally - still puzzled as to the reason for that.([#13](https://github.com/Freshly/stockpot/pull/13) [victorFSL])
+- Upgrade a few gems.([#13](https://github.com/Freshly/stockpot/pull/13) [victorFSL])
+
+## [v0.3.0] - 2020-02-10
+
+### Added
+- Add return errors to a before action to dry up code in the records_controller. ([#9](https://github.com/Freshly/stockpot/pull/9/) [victorFSL])
+- Add capability to query factories that have a different name than the model([#10](https://github.com/Freshly/stockpot/pull/10) [victorFSL]
+- Backtrace errors is now sent back with the error message, for better debugging experience. (https://github.com/Freshly/stockpot/pull/10) [victorFSL]
+
+### Changed
+- Improve format of create action in the records_controller to increase readability. ([#9](https://github.com/Freshly/stockpot/pull/9) [victorFSL])
+- Add in some initial error handling because everything is not okay. ([#10](https://github.com/Freshly/stockpot/pull/10) [jaysonesmith]
+- Update and destroy action now have the capability to use namespacing ie. 'module/class' -> 'Module::Class' (https://github.com/Freshly/stockpot/pull/10) [victorFSL]
+- Transaction capabilities, to rollback if an error happens. (https://github.com/Freshly/stockpot/pull/10) [victorFSL]
+
+### Security
+
+- Updated gemfile.lock for security purposes. ([#7](https://github.com/Freshly/stockpot/pull/4) [jaysonesmith])
+
+## [v0.2.1] - 2019-11-4
