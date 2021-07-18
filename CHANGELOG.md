@@ -67,3 +67,30 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated gemfile.lock for security purposes. ([#7](https://github.com/Freshly/stockpot/pull/4) [jaysonesmith])
 
 ## [v0.2.1] - 2019-11-4
+
+### Changed
+
+- Loosened Redis version in gemspec. ([#4](https://github.com/Freshly/stockpot/pull/4) [jaysonesmith])
+
+## [v0.2.0] - 2019-10-17
+
+### Added
+
+- Added very basic `healthz` route for easily checking whether Stockpot's routes have been loaded correctly. ([#3](https://github.com/Freshly/stockpot/pull/3) [jaysonesmith])
+
+### Fixed
+
+- Removed bang from `create` call in records controller ([#2](https://github.com/Freshly/stockpot/pull/2) [corbettbw])
+
+## [v0.1.6] - 2019-10-10
+
+### Changed
+
+- Updated gemspec to require rails 5.2.3 or higher for flexibility. Lower versions may likely work, but are untested. ([jaysonesmith])
+
+## [v0.1.5] - 2019-10-07
+
+### Added
+
+- Pull request template ([jaysonesmith])
+- CONTRIBUTING file ([#1](https://github.com/Freshly/stockpot/pull/1) [jaysonesmith])
