@@ -16,3 +16,17 @@ The project's repo will look _similar_ to a Rails app, though very pared down. T
 - Make sure to update the [CHANGELOG](CHANGELOG.md) with your changes.
   - Please follow the existing [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) format
   - Add yourself to the contributors list at the bottom so that attribute links work
+  - Attribute the changes you've made to yourself (and others if it was a group effort) by specifying the PR/Issue number(s) and your linked username like this: `([#1](https://github.com/Freshly/stockpot/pull/1) [jaysonesmith])`
+- Add tests where applicable! We want to make sure that our changes don't detract from existing functionality and that other's can continue to rely on Stockpot for their needs.
+
+## Releases
+
+When changes on Master need to be released, the following steps should be followed, assuming you have release privileges.
+
+- Update the version number in [version.rb](./lib/stockpot/version.rb)
+- Run `bundle` so that the [Gemfile.lock](Gemfile.lock) gets updated.
+- Run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org). Remember to use the MAJOR.MINOR.PATCH formatting of [Semantic Versioning](https://semver.org/)
+
+### Who
+
+- [Freshly developers](https://github.com/Freshly/)
