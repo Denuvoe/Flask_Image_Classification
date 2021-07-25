@@ -133,3 +133,28 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Claim gem name ([jaysonesmith])
   - Note: Released from spicerack initially.
+
+<!-- Releases -->
+[Unreleased]: https://github.com/Freshly/stockpot/compare/v0.4.3...HEAD
+[v0.4.3]: https://github.com/Freshly/stockpot/compare/v0.4.2...v0.4.3
+[v0.4.2]: https://github.com/Freshly/stockpot/compare/v0.4.1...v0.4.2
+[v0.4.1]: https://github.com/Freshly/stockpot/compare/v0.4.0...v0.4.1
+[v0.4.0]: https://github.com/Freshly/stockpot/compare/v0.3.1...v0.4.0
+[v0.3.1]: https://github.com/Freshly/stockpot/compare/v0.3.0...v0.3.1
+[v0.3.0]: https://github.com/Freshly/stockpot/compare/v0.2.1...v0.3.0
+[v0.2.1]: https://github.com/Freshly/stockpot/compare/v0.2.0...v0.2.1
+[v0.2.0]: https://github.com/Freshly/stockpot/compare/v0.1.6...v0.2.0
+[v0.1.6]: https://github.com/Freshly/stockpot/compare/v0.1.5...v0.1.6
+[v0.1.5]: https://github.com/Freshly/stockpot/compare/v0.1.4...v0.1.5
+[v0.1.4]: https://github.com/Freshly/stockpot/compare/v0.1.3...v0.1.4
+[v0.1.3]: https://github.com/Freshly/stockpot/compare/v0.1.2...v0.1.3
+[v0.1.2]: https://github.com/Freshly/stockpot/compare/v0.1.1...v0.1.2
+[v0.1.1]: https://github.com/Freshly/stockpot/releases/tag/v0.1.1
+
+<!-- Contributors -->
+[brianharman]: https://githuhb.com/brianharman
+[corbettbw]: https://github.com/corbettbw
+[dapperDerek]: https://github.com/dapperDerek
+[jaysonesmith]: https://github.com/jaysonesmith
+[victorFSL]: https://github.com/victorFSL
+[yauhen-shulha]: https://github.com/yauhen-shulha
