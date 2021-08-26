@@ -232,3 +232,11 @@ DEPENDENCIES
   pry (~> 0.13.0)
   pry-byebug (~> 3.9)
   rake (~> 13.0.6)
+  rspec-rails (~> 5.0.2)
+  shoulda-matchers (~> 5.0.0)
+  simplecov (~> 0.21.2)
+  spicerack-styleguide (>= 0.26.0.4)
+  stockpot!
+
+BUNDLED WITH
+   2.2.25
