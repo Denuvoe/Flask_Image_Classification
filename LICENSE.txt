@@ -2,4 +2,4 @@ The MIT License (MIT)
 
 Copyright (c) 2019 Jayson Smith
 
-Permiss
+Permission is hereby granted, free of charge, to
