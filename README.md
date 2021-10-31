@@ -69,3 +69,46 @@ Query for data. Accepts a array of objects that require at least a model name, b
 
 ```javascript
 [
+  { model: "user" },
+  { model: "address" }
+]
+// or
+[
+  { model: "user", id: "foo"
+]
+```
+
+#### POST
+
+Create new data. Accepts an an array of objects specifying a single model with additional qualifiers.
+
+* factory (required) - Specify which factory to create a record with.
+* list (optional) - Specify a count of items to create, default: 1
+* traits (optional) - An array of strings specifying any traits you may want to use with your data. Applies to all records created.
+* attributes (optional) - An array of objects allowing for the specification of data to be used when creating records. Array position matches with list order if multiple records are desired.
+
+```javascript
+[{
+  factory: "user",
+  traits: ["having_address"],
+  attributes: [{
+    email: "foo@bar.com",
+    password: "baz",
+    first_name: "Foo",
+    last_name: "Bar"
+  }]
+}]
+```
+
+#### DELETE
+
+Remove data. Accepts the same type of input as GET
+
+#### PUT
+
+Update data Accepts an array of objects with each object specifying the model type to be updated along with the data to update. Input is uses the same base as GET and DELETE, but also accepts an `update` object allowing for the specification of the data to be updated.
+
+```javascript
+[
+  {
+    model: "user",
