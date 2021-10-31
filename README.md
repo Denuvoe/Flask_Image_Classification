@@ -21,3 +21,51 @@ Initial development notes: Stockpot is very much a work in progress. The initial
 * [Installation](#installation)
 * [Usage](#usage)
 * [Development](#development)
+* [Contributing](#contributing)
+* [License](#license)
+
+## Installation
+
+Add this line to your application's Gemfile:
+
+```ruby
+gem 'stockpot'
+```
+
+And then execute:
+
+```bash
+bundle
+```
+
+Or install it yourself as:
+
+```bash
+gem install stockpot
+```
+
+## Usage
+---
+
+## Rails App
+
+## !! Warning !!
+
+**You should only enable this in environments that are **NOT** production. If you choose to ignore this warning, do so at your own risk!! Wrap the following in a check for environments with something like `Rails.env.test?` if you don't have anything else in place.**
+
+Add the `Stockpot` engine to your `/config/routes.rb` file, changing the base path if you'd like to:
+
+```ruby
+mount Stockpot::Engine, at: "/stockpot"
+```
+
+This will give you the following [routes](/config/routes.rb) (assuming the default "/stockpot" path):
+
+### `/stockpot/records`
+
+#### GET
+
+Query for data. Accepts a array of objects that require at least a model name, but can also include additional qualifying data.
+
+```javascript
+[
