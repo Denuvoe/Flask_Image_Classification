@@ -112,3 +112,29 @@ Update data Accepts an array of objects with each object specifying the model ty
 [
   {
     model: "user",
+    user_id: "123",
+    update: {
+      status: "active",
+      email: "foo@bar.com"
+    }
+  }
+]
+```
+
+### `/stockpot/clean_database`
+
+#### DELETE
+
+Clears Rails & Redis caches and truncates Active Records databases. No body required.
+
+### `/stockpot/redis`
+
+#### GET
+
+Query for data. Accepts key or field to use to search cache for record.
+
+```javascript
+{
+  key: "123",
+  field: "foo"
+}
