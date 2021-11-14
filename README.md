@@ -175,3 +175,30 @@ Cypress.Commands.add("getRecords", args => {
 Our tests can then call this command like this
 
 ```javascript
+cy.getRecords([{ model: "user", id: user.id }])
+  .then(res => {
+    expect(newEmail).to.eql(res.body.users[0].email)
+  })
+```
+
+## Development
+
+After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. To install this gem onto your local machine, run `bundle exec rake install`.
+
+See the next section on contributing for more info.
+
+## Contributing
+
+This Open Source is supported by [Freshly](https://freshly.com), a company committed to quality code and delicious food.
+
+We're basically [always hiring](https://jobs.lever.co/freshly).
+
+Come join us in our New York City, Phoenix, or Minsk offices and write some awesome software!
+
+Community support is always appreciated! Bug reports and pull requests are welcome on [GitHub](https://github.com/Freshly/stockpot).
+
+Please read our [CONTRIBUTING](CONTRIBUTING.md) doc for more information!
+
+## License
+
+The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
