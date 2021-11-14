@@ -138,3 +138,40 @@ Query for data. Accepts key or field to use to search cache for record.
   key: "123",
   field: "foo"
 }
+```
+
+#### GET - Keys
+
+Query for all keys within data. No body or argument required.
+
+#### POST - Create new data
+
+Accepts an object specifying a key, field, and value to be inserted into Redis cache.
+
+```javascript
+{
+  key: "123",
+  field: "foo",
+  value: "bar"
+}
+```
+
+## Cypress/External Suite Examples
+
+We utilize Cypress commands to abstract out helpers for setting up state such as
+
+```javascript
+Cypress.Commands.add("getRecords", args => {
+  cy.request({
+    method: "GET",
+    url: "stockpot/records",
+    body: {
+      models: args
+    }
+  })
+})
+```
+
+Our tests can then call this command like this
+
+```javascript
