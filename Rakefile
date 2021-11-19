@@ -1,4 +1,6 @@
 # frozen_string_literal: true
 
 begin
-  require "b
+  require "bundler/setup"
+rescue LoadError
+  puts
