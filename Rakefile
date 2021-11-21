@@ -3,4 +3,4 @@
 begin
   require "bundler/setup"
 rescue LoadError
-  puts
+  puts "You must `gem install bundler` and `bu
