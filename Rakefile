@@ -7,3 +7,5 @@ rescue LoadError
 end
 
 APP_RAKEFILE = File.expand_path("spec/dummy/Rakefile", __dir__)
+
+require File.expand_path("../spec/dummy/config/
