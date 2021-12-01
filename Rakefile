@@ -9,4 +9,6 @@ end
 APP_RAKEFILE = File.expand_path("spec/dummy/Rakefile", __dir__)
 
 require File.expand_path("../spec/dummy/config/application", __FILE__)
-require
+require "bundler/gem_tasks"
+
+load "rail
