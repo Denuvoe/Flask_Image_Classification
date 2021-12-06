@@ -13,4 +13,6 @@ require "bundler/gem_tasks"
 
 load "rails/tasks/engine.rake"
 
-Bundler::GemHel
+Bundler::GemHelper.install_tasks
+
+task :release do
