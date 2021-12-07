@@ -20,4 +20,5 @@ task :release do
 end
 
 begin
-  require 'rspec/cor
+  require 'rspec/core/rake_task'
+  RSpec::Core::RakeTas
