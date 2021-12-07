@@ -16,3 +16,4 @@ load "rails/tasks/engine.rake"
 Bundler::GemHelper.install_tasks
 
 task :release do
+  sh "bundle exec rake releas
