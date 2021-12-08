@@ -21,4 +21,6 @@ end
 
 begin
   require 'rspec/core/rake_task'
-  RSpec::Core::RakeTas
+  RSpec::Core::RakeTask.new(:spec)
+rescue LoadError
+  puts "
