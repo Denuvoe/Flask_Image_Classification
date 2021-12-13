@@ -23,4 +23,5 @@ begin
   require 'rspec/core/rake_task'
   RSpec::Core::RakeTask.new(:spec)
 rescue LoadError
-  puts "Please run `bundle install` to install rspec and other dependencies and try ag
+  puts "Please run `bundle install` to install rspec and other dependencies and try again!"
+end
