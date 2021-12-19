@@ -2,4 +2,4 @@
 
 module Stockpot
   class DatabaseCleanerController < MainController
-    # Clean database befo
+    # Clean database before, between, and after tests by clearing Rails
