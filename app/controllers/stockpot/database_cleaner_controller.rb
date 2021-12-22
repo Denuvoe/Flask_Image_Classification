@@ -7,4 +7,5 @@ module Stockpot
     def index
       clear_cache_and_redis
       clean_database
-   
+      render json: { status: 204 }
+    end
