@@ -5,4 +5,6 @@ module Stockpot
     # Clean database before, between, and after tests by clearing Rails
     # and REDIS caches and truncating the active record database.
     def index
-      clear_cache_
+      clear_cache_and_redis
+      clean_database
+   
