@@ -9,3 +9,7 @@ module Stockpot
       clean_database
       render json: { status: 204 }
     end
+
+    private
+
+    def clear_cache_an
