@@ -15,4 +15,7 @@ module Stockpot
     def clear_cache_and_redis
       DatabaseCleaner[:redis].clean_with(:deletion)
       Rails.cache.clear
-      Tim
+      Timecop.return
+    end
+
+    def clean_database
