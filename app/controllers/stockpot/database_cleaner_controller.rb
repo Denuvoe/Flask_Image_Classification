@@ -12,4 +12,5 @@ module Stockpot
 
     private
 
-    def clear_cache_an
+    def clear_cache_and_redis
+      DatabaseCleaner
