@@ -13,4 +13,5 @@ module Stockpot
     private
 
     def clear_cache_and_redis
-      DatabaseCleaner
+      DatabaseCleaner[:redis].clean_with(:deletion)
+     
