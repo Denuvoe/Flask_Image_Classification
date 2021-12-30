@@ -19,3 +19,4 @@ module Stockpot
     end
 
     def clean_database
+      DatabaseCleaner[:active_r
