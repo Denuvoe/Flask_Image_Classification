@@ -3,4 +3,4 @@
 module Stockpot
   class HealthzController < MainController
     def index
- 
+      render json: { "message": "success" 
