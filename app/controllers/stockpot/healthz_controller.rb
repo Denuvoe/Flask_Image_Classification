@@ -1,4 +1,6 @@
 # frozen_string_literal: true
 
 module Stockpot
-  class HealthzController
+  class HealthzController < MainController
+    def index
+ 
