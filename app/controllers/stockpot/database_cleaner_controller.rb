@@ -20,4 +20,6 @@ module Stockpot
 
     def clean_database
       DatabaseCleaner[:active_record].clean_with(:truncation)
-  
+    end
+  end
+end
