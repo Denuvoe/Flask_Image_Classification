@@ -1,1 +1,4 @@
-# frozen_string_l
+# frozen_string_literal: true
+
+module Stockpot
+  class MainCont
