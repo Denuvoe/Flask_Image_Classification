@@ -1,4 +1,5 @@
 # frozen_string_literal: true
 
 module Stockpot
-  class MainCont
+  class MainController < ActionController::API
+    i
