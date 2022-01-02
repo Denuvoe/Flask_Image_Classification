@@ -2,4 +2,5 @@
 
 module Stockpot
   class MainController < ActionController::API
-    i
+    include ActiveSupport::Rescuable
+    include 
