@@ -3,4 +3,6 @@
 module Stockpot
   class MainController < ActionController::API
     include ActiveSupport::Rescuable
-    include 
+    include Helper::Errors
+
+    rescue_from StandardEr
