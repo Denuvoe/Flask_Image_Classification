@@ -5,4 +5,5 @@ module Stockpot
     include ActiveSupport::Rescuable
     include Helper::Errors
 
-    rescue_from StandardEr
+    rescue_from StandardError do |exception|
+      rescue_error(excepti
