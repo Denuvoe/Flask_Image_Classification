@@ -46,3 +46,37 @@ module Stockpot
             factory_arguments = [ factory, *traits, attributes ].compact
             @factory_instance = FactoryBot.create(*factory_arguments)
             ids << @factory_instance.id
+          end
+
+          factory_name = pluralize(factory).camelize(:lower)
+
+          @response_data[factory_name] = [] unless @response_data.key?(factory_name)
+          @response_data[factory_name].concat(@factory_instance.class.name.constantize.where(id: ids))
+        end
+      end
+      render json: @response_data, status: :accepted
+    end
+
+    def destroy
+      ActiveRecord::Base.transaction do
+        models.each_with_index do |element, i|
+          model = element[:model]
+          class_name = find_correct_class_name(model)
+          formatted_model = pluralize(model).camelize(:lower).gsub("::", "")
+
+          class_name.constantize.where(models[i].except(:model)).each do |record|
+            record.destroy!
+            @response_data[formatted_model] = [] unless @response_data.key?(formatted_model)
+            @response_data[formatted_model] << record
+          end
+        end
+      end
+      render json: @response_data, status: :accepted
+    end
+
+    def update
+      ActiveRecord::Base.transaction do
+        models.each_with_index do |element, i|
+          model = element[:model]
+          class_name = find_correct_class_name(model)
+          update_params = params.permit![:models][i][:update].to_h
