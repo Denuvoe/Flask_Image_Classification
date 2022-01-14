@@ -2,3 +2,4 @@
 # This command will automatically be run when you run "rails" with Rails gems
 # installed from the root of your application.
 
+ENGINE_ROOT = File.expand_path('..', __di
