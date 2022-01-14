@@ -1,2 +1,3 @@
 #!/usr/bin/env ruby
-# This command will automatically be run
+# This command will automatically be run when you run "rails" with Rails gems
+# 
