@@ -80,3 +80,39 @@ module Stockpot
           model = element[:model]
           class_name = find_correct_class_name(model)
           update_params = params.permit![:models][i][:update].to_h
+          attributes_to_search = models[i].except(:model, :update)
+          formatted_model = pluralize(model).camelize(:lower).gsub("::", "")
+
+          class_name.constantize.where(attributes_to_search).each do |record|
+            record.update!(update_params)
+            @response_data[formatted_model] = [] unless @response_data.key?(formatted_model)
+            @response_data[formatted_model] << class_name.constantize.find(record.id)
+            @response_data[formatted_model].reverse!.uniq! { |obj| obj["id"] }
+          end
+        end
+      end
+      render json: @response_data, status: :accepted
+    end
+
+    private
+
+    def find_correct_class_name(model)
+      # We are getting the class name from the factory or we default to whatever we send in.
+      # Something to keep in mind "module/class_name".camelize will translate into "Module::ClassName"
+      # which is perfect for namespaces in case there is no factory associated with a specific model
+      if FactoryBot.factories.registered?(model)
+        FactoryBot.factories.find(model).build_class.to_s
+      else
+        model.camelize
+      end
+    end
+
+    def models
+      params.permit![:models].map(&:to_h)
+    end
+
+    def factories
+      params.permit![:factories].map(&:to_h)
+    end
+  end
+end
