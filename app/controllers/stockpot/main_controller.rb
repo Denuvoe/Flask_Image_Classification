@@ -6,4 +6,7 @@ module Stockpot
     include Helper::Errors
 
     rescue_from StandardError do |exception|
-      rescue_error(excepti
+      rescue_error(exception)
+    end
+  end
+end
