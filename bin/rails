@@ -11,4 +11,5 @@ ENV['BUNDLE_GEMFILE'] ||= File.expand_path('../Gemfile', __dir__)
 require 'bundler/setup' if File.exist?(ENV['BUNDLE_GEMFILE'])
 
 require "rails"
-# Pick the frameworks you wa
+# Pick the frameworks you want:
+require "active_model/railtie
