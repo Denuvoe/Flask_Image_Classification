@@ -2,4 +2,9 @@
 # frozen_string_literal: true
 
 set -euo pipefail
-IFS=$"\n\
+IFS=$"\n\t"
+set -vx
+
+bundle install
+
+# Do an
