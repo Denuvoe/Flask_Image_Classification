@@ -10,4 +10,6 @@ Stockpot::Engine.routes.draw do
 
   post "/redis", to: "redis#create"
   get "/redis", to: "redis#index"
-  get "/redi
+  get "/redis/keys", to: "redis#keys"
+
+  get "/healt
