@@ -9,4 +9,5 @@ Stockpot::Engine.routes.draw do
   delete "/clean_database", to: "database_cleaner#index"
 
   post "/redis", to: "redis#create"
- 
+  get "/redis", to: "redis#index"
+  get "/redi
