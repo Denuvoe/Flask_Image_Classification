@@ -1,1 +1,3 @@
-# frozen_stri
+# frozen_string_literal: true
+
+module Stockp
