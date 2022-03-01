@@ -1,3 +1,3 @@
 # frozen_string_literal: true
 
-RSpec.describe
+RSpec.describe Stockpot::HealthzController, ty
