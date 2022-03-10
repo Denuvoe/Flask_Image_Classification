@@ -146,3 +146,42 @@ RSpec.describe Stockpot::RecordsController, type: :request do
       params = {
         models: [
           {
+            model: "user",
+          },
+          {
+            model: "address",
+          },
+        ],
+      }
+
+      get records_path, params: params, headers: json_headers
+      expect(response.status).to be 200
+      expect(json_body["users"].count).to eq(1)
+      expect(json_body["addresses"].count).to eq(1)
+    end
+
+    context "there are multiple records with no primary key" do
+      before(:each) do
+        address
+        second_address
+      end
+
+       it "can return multiple records" do
+        params = {
+          models: [
+            {
+              model: "address",
+            },
+          ],
+        }
+
+        get records_path, params: params, headers: json_headers
+        expect(response.status).to be 200
+        expect(json_body["addresses"].count).to eq(2)
+      end
+
+      it "returns the correct record" do
+        params = {
+          models: [
+            {
+              model: "address",
