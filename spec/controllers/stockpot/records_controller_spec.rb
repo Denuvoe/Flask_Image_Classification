@@ -225,3 +225,46 @@ RSpec.describe Stockpot::RecordsController, type: :request do
             id: user_admin.id,
           },
         ],
+      }
+
+      get records_path, params: params, headers: json_headers
+      expect(response.status).to be 200
+      expect(json_body["usersAdmins"][0]["is_admin"]).to eq(user_admin.is_admin)
+      expect(Users::Admin.all.count).to be(1)
+    end
+
+    it "returns one record even if it is requested more than once" do
+      user
+      params = {
+        models: [
+          {
+            model: "user",
+            id: user.id,
+          },
+          {
+            model: "user",
+            id: user.id,
+          },
+        ],
+      }
+
+      get records_path, params: params, headers: json_headers
+      expect(response.status).to be 200
+      expect(json_body["users"].count).to eq(1)
+      expect(json_body["users"][0]["first_name"]).to eq(user.first_name)
+      expect(json_body["users"][0]["last_name"]).to eq(user.last_name)
+    end
+  end
+
+  describe "DELETE #records" do
+    it "requires a model to specified to delete a record" do
+      delete records_path, params: {}.to_json, headers: json_headers
+      check_error_response(response, expected)
+    end
+
+    it "deletes the record specified" do
+      user
+      params = {
+        models: [
+          {
+            model: "user",
