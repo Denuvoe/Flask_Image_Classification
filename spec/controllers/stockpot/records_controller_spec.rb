@@ -116,3 +116,33 @@ RSpec.describe Stockpot::RecordsController, type: :request do
       post records_path, params: params, headers: json_headers
       expect(response.status).to be 417
       expect(User.all.count).to be(0)
+    end
+  end
+
+  describe "GET #records" do
+    it "requires a model be specified to retrieve a record" do
+      get records_path, params: {}.to_json, headers: json_headers
+      check_error_response(response, expected)
+    end
+
+    it "can return multiple records of the same model" do
+      user
+      second_user
+      params = {
+        models: [
+          {
+            model: "user",
+          },
+        ],
+      }
+
+      get records_path, params: params, headers: json_headers
+      expect(response.status).to be 200
+      expect(json_body["users"].count).to eq(2)
+    end
+
+    it "can return multiple records of differing models" do
+      address
+      params = {
+        models: [
+          {
