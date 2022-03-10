@@ -40,3 +40,40 @@ RSpec.describe Stockpot::RecordsController, type: :request do
       first_name = "firstName1"
       last_name = "lastName1"
       params = {
+        factories: [
+          {
+            factory: "user",
+            attributes: [
+              {
+                first_name: first_name,
+                last_name: last_name,
+              },
+            ],
+          },
+        ],
+      }
+
+      post records_path, params: params.to_json, headers: json_headers
+      expect(response.status).to be 202
+      expect(User.last.first_name).to eql(first_name)
+      expect(json_body["users"][0]["first_name"]).to eq(first_name)
+      expect(json_body["users"][0]["last_name"]).to eq(last_name)
+    end
+
+    it "creates multiple records" do
+      first_name1 = "firstName1"
+      last_name1 = "lastName1"
+      first_name2 = "firstName2"
+      last_name2 = "lastName2"
+      params = {
+        factories: [
+          {
+            list: 2,
+            factory: "user",
+            attributes: [
+              {
+                first_name: first_name1,
+                last_name: last_name1,
+              },
+              {
+                first_name: first_name2,
