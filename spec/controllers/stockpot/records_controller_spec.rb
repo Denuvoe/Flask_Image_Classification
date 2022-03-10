@@ -185,3 +185,43 @@ RSpec.describe Stockpot::RecordsController, type: :request do
           models: [
             {
               model: "address",
+              user_id: address.user_id,
+            },
+          ],
+        }
+
+        get records_path, params: params, headers: json_headers
+        expect(response.status).to be 200
+        expect(json_body["addresses"].count).to be(1)
+        expect(json_body["addresses"][0]["city"]).to eq(address.city)
+        expect(User.all.count).to be(2)
+      end
+    end
+
+    it "returns the correct record" do
+      user
+      params = {
+        models: [
+          {
+            model: "user",
+            id: user.id,
+          },
+        ],
+      }
+
+      get records_path, params: params, headers: json_headers
+      expect(response.status).to be 200
+      expect(json_body["users"][0]["first_name"]).to eq(user.first_name)
+      expect(json_body["users"][0]["last_name"]).to eq(user.last_name)
+      expect(User.all.count).to be(1)
+    end
+
+    it "returns the correct namespaced records" do
+      user_admin
+      params = {
+        models: [
+          {
+            model: "users/admin",
+            id: user_admin.id,
+          },
+        ],
