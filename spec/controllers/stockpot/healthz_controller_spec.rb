@@ -3,4 +3,6 @@
 RSpec.describe Stockpot::HealthzController, type: :request do
   describe "GET #index" do
     it "returns successfully if the route is available" do
-      get heal
+      get healthz_path
+
+      expect(respo
