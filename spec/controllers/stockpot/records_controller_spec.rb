@@ -77,3 +77,42 @@ RSpec.describe Stockpot::RecordsController, type: :request do
               },
               {
                 first_name: first_name2,
+                last_name: last_name2,
+              },
+            ],
+          },
+        ],
+      }.to_json
+
+      post records_path, params: params, headers: json_headers
+      expect(response.status).to be 202
+      expect(User.all.count).to be(2)
+      expect(json_body["users"][0]["first_name"]).to eq(first_name1)
+      expect(json_body["users"][0]["last_name"]).to eq(last_name1)
+      expect(json_body["users"][1]["first_name"]).to eq(first_name2)
+      expect(json_body["users"][1]["last_name"]).to eq(last_name2)
+    end
+
+    it "rolls back transactions if an error is triggered" do
+      params = {
+        factories: [
+          {
+            list: 2,
+            factory: "user",
+            attributes: [
+              {
+                first_name: "first_name_1",
+                last_name: "last_name_1",
+              },
+              {
+                first_name: "no",
+                last_name: "last_name_2",
+              },
+            ],
+          },
+        ],
+      }.to_json
+
+      post records_path, params: params, headers: json_headers
+      expect(response.status).to be 417
+      expect(User.all.count).to be(0)
