@@ -5,4 +5,7 @@ RSpec.describe Stockpot::HealthzController, type: :request do
     it "returns successfully if the route is available" do
       get healthz_path
 
-      expect(respo
+      expect(response.code).to eql "200"
+    end
+  end
+end
