@@ -268,3 +268,45 @@ RSpec.describe Stockpot::RecordsController, type: :request do
         models: [
           {
             model: "user",
+            id: user.id,
+          },
+        ],
+      }.to_json
+
+      expect(User.first).to eql(user)
+      delete records_path, params: params, headers: json_headers
+      expect(response.status).to be 202
+      expect(User.all).to be_empty
+    end
+
+    it "deletes multiple records" do
+      user
+      second_user
+      params = {
+        models: [
+          {
+            model: "user",
+          },
+        ],
+      }.to_json
+
+      delete records_path, params: params, headers: json_headers
+      expect(response.status).to be 202
+      expect(User.all).to be_empty
+    end
+
+    it "rollsback transactions if something fails" do
+      user
+      user_admin
+      params = {
+        models: [
+          {
+            model: "user",
+            id: user.id,
+          },
+          {
+            model: "users/admin",
+            id: user_admin.id,
+          },
+        ],
+      }.to_json
