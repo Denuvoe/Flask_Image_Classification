@@ -310,3 +310,36 @@ RSpec.describe Stockpot::RecordsController, type: :request do
           },
         ],
       }.to_json
+
+      delete records_path, params: params, headers: json_headers
+      expect(response.status).to be 400
+      expect(User.all.count).to be(2)
+      expect(Users::Admin.all.count).to be(1)
+    end
+
+    it "deletes models that are namespaced" do
+      user_admin = FactoryBot.create(:users_admin, is_admin: false)
+      params = {
+        models: [
+          {
+            model: "users/admin",
+            id: user_admin.id,
+          },
+        ],
+      }.to_json
+
+      delete records_path, params: params, headers: json_headers
+      expect(response.status).to be 202
+      expect(json_body["usersAdmins"][0]["is_admin"]).to eq(user_admin.is_admin)
+      expect(Users::Admin.all.count).to be(0)
+    end
+  end
+
+  describe "PUT #records" do
+    it "requires a factory param to be specified to update" do
+      put records_path, params: {}.to_json, headers: json_headers
+      check_error_response(response, expected)
+    end
+
+    it "updates the specified record" do
+      user
