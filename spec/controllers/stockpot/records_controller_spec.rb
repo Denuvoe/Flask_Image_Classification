@@ -343,3 +343,36 @@ RSpec.describe Stockpot::RecordsController, type: :request do
 
     it "updates the specified record" do
       user
+      updated_first_name = "updated_first_name"
+      params = {
+        models: [
+          {
+            model: "user",
+            id: user.id,
+            update: { first_name: updated_first_name },
+          },
+        ],
+      }.to_json
+
+      expect(User.last.first_name).to eql(user.first_name)
+      put records_path, params: params, headers: json_headers
+      expect(User.last.first_name).to eq(updated_first_name)
+    end
+
+    it "updates multiple records" do
+      user
+      second_user
+      updated_first_name = "updated_first_name"
+      params = {
+        models: [
+          {
+            model: "user",
+            update: { first_name: updated_first_name },
+          },
+        ],
+      }.to_json
+
+      put records_path, params: params, headers: json_headers
+      expect(User.last.first_name).to eql(updated_first_name)
+      expect(User.first.first_name).to eq(updated_first_name)
+    end
