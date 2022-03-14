@@ -411,3 +411,36 @@ RSpec.describe Stockpot::RecordsController, type: :request do
             update: { first_name: "no" },
           },
         ],
+      }.to_json
+
+      put records_path, params: params, headers: json_headers
+      expect(response.status).to be 417
+      expect(User.first.first_name).to eq(user.first_name)
+      expect(User.last.first_name).to eq(second_user.first_name)
+    end
+
+    it "returns one record when several updates are made to the same record" do
+      user
+      params = {
+        models: [
+          {
+            model: "user",
+            id: user.id,
+            update: { first_name: "hello" },
+          },
+          {
+            model: "user",
+            id: user.id,
+            update: { last_name: "world" },
+          },
+        ],
+      }.to_json
+
+      put records_path, params: params, headers: json_headers
+      expect(response.status).to be 202
+      expect(json_body["users"][0]["first_name"]).to eq("hello")
+      expect(json_body["users"][0]["last_name"]).to eq("world")
+      expect(json_body["users"].length).to eq(1)
+    end
+  end
+end
