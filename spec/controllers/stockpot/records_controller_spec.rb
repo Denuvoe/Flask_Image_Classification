@@ -376,3 +376,38 @@ RSpec.describe Stockpot::RecordsController, type: :request do
       expect(User.last.first_name).to eql(updated_first_name)
       expect(User.first.first_name).to eq(updated_first_name)
     end
+
+    it "updates models that are namespaced" do
+      user_admin
+      params = {
+        models: [
+          {
+            model: "users/admin",
+            id: user_admin.id,
+            update: { is_admin: false },
+          },
+        ],
+      }.to_json
+
+      expect(Users::Admin.first.is_admin).to be_truthy
+      put records_path, params: params, headers: json_headers
+      expect(response.status).to be 202
+      expect(json_body["usersAdmins"][0]["is_admin"]).to eq(false)
+    end
+
+    it "rolls back changes if something fails" do
+      user
+      second_user
+      params = {
+        models: [
+          {
+            model: "user",
+            id: user.id,
+            update: { first_name: "hello" },
+          },
+          {
+            model: "user",
+            id: user.id,
+            update: { first_name: "no" },
+          },
+        ],
