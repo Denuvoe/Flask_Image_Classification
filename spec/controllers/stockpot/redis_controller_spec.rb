@@ -1,3 +1,3 @@
 # frozen_string_literal: true
 
-RSpec.desc
+RSpec.describe Stockpot::RedisController, typ
