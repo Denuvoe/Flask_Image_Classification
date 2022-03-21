@@ -7,4 +7,5 @@ RSpec.describe Stockpot::RedisController, type: :request do
   let(:field) { "field" }
 
   describe "GET #index" do
-    it "returns the redis value
+    it "returns the redis value" do
+      REDIS.set(key, value
