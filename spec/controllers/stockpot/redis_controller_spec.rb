@@ -9,4 +9,5 @@ RSpec.describe Stockpot::RedisController, type: :request do
   describe "GET #index" do
     it "returns the redis value" do
       REDIS.set(key, value)
-      get redis_path, params: { key: k
+      get redis_path, params: { key: key }
+      expect(response.body)
