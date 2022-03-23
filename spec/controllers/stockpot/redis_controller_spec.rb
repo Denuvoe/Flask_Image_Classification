@@ -14,4 +14,4 @@ RSpec.describe Stockpot::RedisController, type: :request do
       expect(response.status).to eq(200)
     end
 
-    it "re
+    it "returns the redis value with field" do
