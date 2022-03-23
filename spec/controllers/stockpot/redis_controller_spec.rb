@@ -11,4 +11,7 @@ RSpec.describe Stockpot::RedisController, type: :request do
       REDIS.set(key, value)
       get redis_path, params: { key: key }
       expect(response.body).to eq(value.to_json)
-      expect(re
+      expect(response.status).to eq(200)
+    end
+
+    it "re
