@@ -15,3 +15,5 @@ RSpec.describe Stockpot::RedisController, type: :request do
     end
 
     it "returns the redis value with field" do
+      REDIS.hset(key, field, value)
+   
