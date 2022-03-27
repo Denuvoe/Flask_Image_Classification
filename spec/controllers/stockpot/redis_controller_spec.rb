@@ -17,4 +17,5 @@ RSpec.describe Stockpot::RedisController, type: :request do
     it "returns the redis value with field" do
       REDIS.hset(key, field, value)
       get redis_path, params: { key: key, field: field }
-      expect(response.bo
+      expect(response.body).to eq(value.to_json)
+      expect(
