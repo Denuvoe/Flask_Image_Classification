@@ -21,3 +21,6 @@ RSpec.describe Stockpot::RedisController, type: :request do
       expect(response.status).to eq(200)
     end
   end
+
+  describe "POST #create" do
+    it 
