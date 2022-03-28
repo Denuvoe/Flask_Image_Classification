@@ -23,4 +23,5 @@ RSpec.describe Stockpot::RedisController, type: :request do
   end
 
   describe "POST #create" do
-    it 
+    it "creates a redis hash" do
+      po
