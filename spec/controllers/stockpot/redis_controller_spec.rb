@@ -30,4 +30,4 @@ RSpec.describe Stockpot::RedisController, type: :request do
     end
 
     it "creates a redis hash with field" do
-      post
+      post redis_path, params: { key: key, 
