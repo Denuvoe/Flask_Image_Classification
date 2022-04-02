@@ -29,4 +29,5 @@ RSpec.describe Stockpot::RedisController, type: :request do
       expect(response.status).to eq(200)
     end
 
-    it "creates a
+    it "creates a redis hash with field" do
+      post
