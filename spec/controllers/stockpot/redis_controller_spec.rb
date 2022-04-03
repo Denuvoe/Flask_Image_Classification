@@ -31,4 +31,6 @@ RSpec.describe Stockpot::RedisController, type: :request do
 
     it "creates a redis hash with field" do
       post redis_path, params: { key: key, value: value, field: field }
-      expect(REDIS.hget(key, field)).to eq(valu
+      expect(REDIS.hget(key, field)).to eq(value)
+      expect(response.status).to eq(200)
+    en
