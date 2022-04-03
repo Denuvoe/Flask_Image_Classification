@@ -36,4 +36,6 @@ RSpec.describe Stockpot::RedisController, type: :request do
     end
   end
 
-  describe "GET #keys
+  describe "GET #keys" do
+    it "gets all keys" do
+      k
