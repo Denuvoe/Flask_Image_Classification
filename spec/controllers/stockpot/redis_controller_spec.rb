@@ -33,4 +33,7 @@ RSpec.describe Stockpot::RedisController, type: :request do
       post redis_path, params: { key: key, value: value, field: field }
       expect(REDIS.hget(key, field)).to eq(value)
       expect(response.status).to eq(200)
-    en
+    end
+  end
+
+  describe "GET #keys
