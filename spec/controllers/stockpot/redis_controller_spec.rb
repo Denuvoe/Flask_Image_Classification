@@ -40,4 +40,6 @@ RSpec.describe Stockpot::RedisController, type: :request do
     it "gets all keys" do
       keys = %w[test1 test2]
       REDIS.set(keys[0], "test1_key")
-      REDIS.set
+      REDIS.set(keys[1], "test2_key")
+
+ 
