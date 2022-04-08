@@ -42,4 +42,5 @@ RSpec.describe Stockpot::RedisController, type: :request do
       REDIS.set(keys[0], "test1_key")
       REDIS.set(keys[1], "test2_key")
 
- 
+      get redis_keys_path
+      expec
