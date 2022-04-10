@@ -1,1 +1,1 @@
-//= l
+//= link_directory ../stylesheets .css
