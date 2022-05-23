@@ -1,3 +1,4 @@
 # frozen_string_literal: true
 
-c
+class ApplicationMailer < ActionMailer::Base
+  de
