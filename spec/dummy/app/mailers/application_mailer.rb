@@ -1,4 +1,5 @@
 # frozen_string_literal: true
 
 class ApplicationMailer < ActionMailer::Base
-  de
+  default from: "from@example.com"
+  layout
