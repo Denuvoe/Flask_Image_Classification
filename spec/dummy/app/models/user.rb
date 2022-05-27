@@ -1,3 +1,4 @@
 # frozen_string_literal: true
 
-class User < Appl
+class User < ApplicationRecord
+  has_one :users_admin,
