@@ -7,4 +7,5 @@ module Users
 
     belongs_to :user
 
-    def
+    def stop_destroy
+      errors.add(:base, :unde
