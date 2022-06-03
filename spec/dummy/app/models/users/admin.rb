@@ -8,4 +8,5 @@ module Users
     belongs_to :user
 
     def stop_destroy
-      errors.add(:base, :unde
+      errors.add(:base, :undestroyable) if is_admin?
+      throw err
