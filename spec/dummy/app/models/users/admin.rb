@@ -9,4 +9,7 @@ module Users
 
     def stop_destroy
       errors.add(:base, :undestroyable) if is_admin?
-      throw err
+      throw error if is_admin?
+    end
+  end
+end
