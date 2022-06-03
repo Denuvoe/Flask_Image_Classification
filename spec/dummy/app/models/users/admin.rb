@@ -1,3 +1,4 @@
 # frozen_string_literal: true
 
-mo
+module Users
+  class Admin < Applica
