@@ -2,4 +2,4 @@
 # frozen_string_literal: true
 
 APP_PATH = File.expand_path("../config/application", __dir__)
-r
+require_relative "../config/boo
