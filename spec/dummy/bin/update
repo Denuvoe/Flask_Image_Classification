@@ -4,4 +4,5 @@
 require "fileutils"
 include FileUtils
 
-# path to your
+# path to your application root.
+APP_ROOT
