@@ -11,4 +11,5 @@ def system!(*args)
   system(*args) || abort("\n== Command #{args} failed ==")
 end
 
-chdir APP_ROO
+chdir APP_ROOT do
+  # This script is a way 
