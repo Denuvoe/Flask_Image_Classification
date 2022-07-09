@@ -19,4 +19,5 @@ chdir APP_ROOT do
   system! "gem install bundler --conservative"
   system("bundle check") || system!("bundle install")
 
-  puts "\n== Removing old l
+  puts "\n== Removing old logs and tempfiles =="
+  system! 
