@@ -16,4 +16,5 @@ chdir APP_ROOT do
   # Add necessary update steps to this file.
 
   puts "== Installing dependencies =="
-  system! "gem instal
+  system! "gem install bundler --conservative"
+  system(
