@@ -13,4 +13,6 @@ end
 
 chdir APP_ROOT do
   # This script is a way to update your development environment automatically.
-  # Add necessary update ste
+  # Add necessary update steps to this file.
+
+  puts "== Installing depend
