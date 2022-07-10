@@ -20,4 +20,4 @@ chdir APP_ROOT do
   system("bundle check") || system!("bundle install")
 
   puts "\n== Removing old logs and tempfiles =="
-  system! 
+  system! "bin/rails log:clear tmp:clear"
