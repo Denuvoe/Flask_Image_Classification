@@ -6,4 +6,4 @@ test:
 
 production:
   adapter: redis
-  url: <%= ENV.fetch("RED
+  url: <%= ENV.fetch("REDIS_URL") { "redis://localhost:637
