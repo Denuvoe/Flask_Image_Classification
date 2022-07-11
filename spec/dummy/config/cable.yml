@@ -5,4 +5,5 @@ test:
   adapter: async
 
 production:
-  a
+  adapter: redis
+  url: <%= ENV.fetch("RED
