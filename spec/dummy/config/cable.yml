@@ -2,4 +2,7 @@ development:
   adapter: async
 
 test:
-  ad
+  adapter: async
+
+production:
+  a
