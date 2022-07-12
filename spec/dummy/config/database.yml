@@ -1,2 +1,4 @@
 # Use this as an example for database.yml
-# Uncomment and set it to your
+# Uncomment and set it to your local environment
+
+default: &defaul
