@@ -3,4 +3,8 @@
 
 default: &default
   adapter: postgresql
-  encod
+  encoding: unicode
+  pool: 5
+
+test:
+  <
