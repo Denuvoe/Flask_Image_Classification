@@ -7,4 +7,6 @@ default: &default
   pool: 5
 
 test:
-  <
+  <<: *default
+  database: test_database
+  
