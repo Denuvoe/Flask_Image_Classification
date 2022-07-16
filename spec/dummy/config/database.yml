@@ -9,4 +9,4 @@ default: &default
 test:
   <<: *default
   database: test_database
-  
+  username: postgres
