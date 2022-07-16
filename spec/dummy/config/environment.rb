@@ -1,4 +1,6 @@
 # frozen_string_literal: true
 
 # Load the Rails application.
-r
+require_relative "application"
+
+# 
