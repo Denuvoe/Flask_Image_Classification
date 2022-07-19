@@ -1,3 +1,3 @@
 # frozen_string_literal: true
 
-# Be sure to restart 
+# Be sure to restart your server when you modify this f
