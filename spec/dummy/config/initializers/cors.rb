@@ -12,4 +12,5 @@
 #     origins 'example.com'
 #
 #     resource '*',
-#  
+#       headers: :any,
+#       meth
