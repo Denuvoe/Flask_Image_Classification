@@ -13,4 +13,4 @@
 #
 #     resource '*',
 #       headers: :any,
-#       meth
+#       methods: [:get, :post, :put, :patch,
