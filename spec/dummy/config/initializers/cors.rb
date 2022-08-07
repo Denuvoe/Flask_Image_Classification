@@ -13,4 +13,6 @@
 #
 #     resource '*',
 #       headers: :any,
-#       methods: [:get, :post, :put, :patch,
+#       methods: [:get, :post, :put, :patch, :delete, :options, :head]
+#   end
+# e
