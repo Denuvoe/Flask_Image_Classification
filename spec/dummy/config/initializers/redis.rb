@@ -1,1 +1,3 @@
-# frozen_string_lit
+# frozen_string_literal: true
+
+require "redi
