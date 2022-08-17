@@ -5,4 +5,4 @@
 # This file contains settings for ActionController::ParamsWrapper which
 # is enabled by default.
 
-# E
+# Enable parameter wrapping for JSON. You 
