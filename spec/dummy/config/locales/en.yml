@@ -6,4 +6,6 @@
 #
 #     I18n.t 'hello'
 #
-# In vi
+# In views, this is aliased to just `t`:
+#
+#
