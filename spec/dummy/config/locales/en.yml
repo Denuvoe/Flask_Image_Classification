@@ -10,4 +10,4 @@
 #
 #     <%= t('hello') %>
 #
-# To use a d
+# To use a different locale, set it with
