@@ -24,4 +24,6 @@
 # Instead, surround them with single quotes.
 #
 # en:
-#   'true
+#   'true': 'foo'
+#
+# To learn more, please
