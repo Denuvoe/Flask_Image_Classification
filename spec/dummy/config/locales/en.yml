@@ -19,4 +19,6 @@
 # The following keys must be escaped otherwise they will not be retrieved by
 # the default I18n backend:
 #
-# true, false, 
+# true, false, on, off, yes, no
+#
+# Instead, surround them with si
