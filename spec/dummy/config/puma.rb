@@ -1,3 +1,3 @@
 # frozen_string_literal: true
 
-# Puma can ser
+# Puma can serve each request in a thread
