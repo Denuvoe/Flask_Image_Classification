@@ -9,4 +9,4 @@
 threads_count = fetch("RAILS_MAX_THREADS", 5)
 threads threads_count, threads_count
 
-# Specifies the `port
+# Specifies the `port` that Puma will listen on to 
