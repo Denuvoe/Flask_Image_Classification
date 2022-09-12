@@ -15,4 +15,4 @@ port fetch("PORT", 3000)
 
 # Specifies the `environment` that Puma will run in.
 #
-environment fetch(
+environment fetch("RAILS_ENV", "developm
