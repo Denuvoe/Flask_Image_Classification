@@ -13,4 +13,4 @@ threads threads_count, threads_count
 #
 port fetch("PORT", 3000)
 
-# Specif
+# Specifies the `environment` that Puma
