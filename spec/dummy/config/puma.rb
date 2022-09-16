@@ -17,4 +17,5 @@ port fetch("PORT", 3000)
 #
 environment fetch("RAILS_ENV", "development")
 
-# Specifies the number of `wo
+# Specifies the number of `workers` to boot in clustered mode.
+# W
