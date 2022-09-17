@@ -18,4 +18,5 @@ port fetch("PORT", 3000)
 environment fetch("RAILS_ENV", "development")
 
 # Specifies the number of `workers` to boot in clustered mode.
-# Workers are forked webserver processes. If using threads and workers togethe
+# Workers are forked webserver processes. If using threads and workers together
+# the concurrency of the applicatio
