@@ -23,4 +23,6 @@ environment fetch("RAILS_ENV", "development")
 # Workers do not work on JRuby or Windows (both of which do not support
 # processes).
 #
-# workers ENV.
+# workers ENV.fetch("WEB_CONCURRENCY") { 2 }
+
+# Use the `p
