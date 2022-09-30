@@ -25,4 +25,4 @@ environment fetch("RAILS_ENV", "development")
 #
 # workers ENV.fetch("WEB_CONCURRENCY") { 2 }
 
-# Use the `p
+# Use the `preload_app!` method when specifying a
