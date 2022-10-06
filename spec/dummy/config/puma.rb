@@ -25,4 +25,5 @@ environment fetch("RAILS_ENV", "development")
 #
 # workers ENV.fetch("WEB_CONCURRENCY") { 2 }
 
-# Use the `preload_app!` method when specifying a
+# Use the `preload_app!` method when specifying a `workers` number.
+# This directive tells
