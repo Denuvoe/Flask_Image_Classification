@@ -30,4 +30,6 @@ environment fetch("RAILS_ENV", "development")
 # before forking the application. This takes advantage of Copy On Write
 # process behavior so workers use less memory.
 #
-# prel
+# preload_app!
+
+# Allow puma to be rest
