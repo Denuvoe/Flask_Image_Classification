@@ -1,1 +1,3 @@
-# frozen_string_
+# frozen_string_literal: true
+
+Rails.application.ro
