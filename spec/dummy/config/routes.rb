@@ -1,3 +1,4 @@
 # frozen_string_literal: true
 
-Rails.application.ro
+Rails.application.routes.draw do
+  mount Stockpot::Engine => "
