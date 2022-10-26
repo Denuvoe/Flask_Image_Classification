@@ -3,4 +3,5 @@
 %w[
   .ruby-version
   .rbenv-vars
-  tmp/
+  tmp/restart.txt
+  tmp/caching-dev.txt
