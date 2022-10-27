@@ -1,3 +1,3 @@
 # frozen_string_literal: true
 
-# This file i
+# This file is used by Rack-based servers to st
