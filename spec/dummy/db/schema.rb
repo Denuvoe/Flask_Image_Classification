@@ -1,1 +1,1 @@
-# This file is auto-generated from the c
+# This file is auto-generated from the current state of the database. Instead
