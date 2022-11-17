@@ -4,4 +4,7 @@ class UserAdmin < ActiveRecord::Migration[6.0]
       t.boolean :is_admin
       t.references :user
 
-      t.time
+      t.timestamps
+    end
+  end
+end
