@@ -2,4 +2,4 @@
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
 #
-# This file
+# This file is the source Rails uses to define your
