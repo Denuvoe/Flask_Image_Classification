@@ -4,4 +4,5 @@
 #
 # This file is the source Rails uses to define your schema when running `bin/rails
 # db:schema:load`. When creating a new database, `bin/rails db:schema:load` tends to
-# be faster and is potentially less error pr
+# be faster and is potentially less error prone than running all of your
+# mig
