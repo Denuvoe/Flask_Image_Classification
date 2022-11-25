@@ -6,4 +6,5 @@
 # db:schema:load`. When creating a new database, `bin/rails db:schema:load` tends to
 # be faster and is potentially less error prone than running all of your
 # migrations from scratch. Old migrations may fail to apply correctly if those
-# migrations use external 
+# migrations use external dependencies or application code.
+#
