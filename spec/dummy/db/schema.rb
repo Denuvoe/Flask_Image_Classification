@@ -8,3 +8,4 @@
 # migrations from scratch. Old migrations may fail to apply correctly if those
 # migrations use external dependencies or application code.
 #
+# It's strongly recommended that yo
