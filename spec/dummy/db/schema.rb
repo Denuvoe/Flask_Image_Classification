@@ -8,4 +8,4 @@
 # migrations from scratch. Old migrations may fail to apply correctly if those
 # migrations use external dependencies or application code.
 #
-# It's strongly recommended that yo
+# It's strongly recommended that you check this file into your vers
