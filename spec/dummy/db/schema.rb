@@ -18,4 +18,5 @@ ActiveRecord::Schema.define(version: 2021_04_14_191156) do
   create_table "addresses", id: false, force: :cascade do |t|
     t.string "city"
     t.bigint "user_id"
-    t.dateti
+    t.datetime "created_at", null: false
+  
