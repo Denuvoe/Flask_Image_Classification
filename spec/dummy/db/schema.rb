@@ -20,4 +20,6 @@ ActiveRecord::Schema.define(version: 2021_04_14_191156) do
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  e
+  end
+
+  create_table "users", force: 
