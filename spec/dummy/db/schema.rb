@@ -29,4 +29,4 @@ ActiveRecord::Schema.define(version: 2021_04_14_191156) do
     t.datetime "updated_at", null: false
   end
 
-  create_t
+  create_table "users_admins", force: :casca
