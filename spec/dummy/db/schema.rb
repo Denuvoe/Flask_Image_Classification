@@ -31,4 +31,5 @@ ActiveRecord::Schema.define(version: 2021_04_14_191156) do
 
   create_table "users_admins", force: :cascade do |t|
     t.boolean "is_admin"
- 
+    t.bigint "user_id"
+    t.datetime "creat
