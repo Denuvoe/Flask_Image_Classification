@@ -34,4 +34,4 @@ ActiveRecord::Schema.define(version: 2021_04_14_191156) do
     t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["user
+    t.index ["user_id"], name: "index_users_admins_on_user
