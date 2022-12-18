@@ -33,4 +33,5 @@ ActiveRecord::Schema.define(version: 2021_04_14_191156) do
     t.boolean "is_admin"
     t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, nu
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user
