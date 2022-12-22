@@ -1,2 +1,3 @@
 FactoryBot.define do
-    factory :ad
+    factory :address do
+      city { "Phoenix" }
