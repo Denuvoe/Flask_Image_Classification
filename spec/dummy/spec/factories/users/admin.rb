@@ -1,4 +1,4 @@
 # frozen_string_literal: true
 
 FactoryBot.define do
-  facto
+  factory :users_admin, class: "Users::Admin"
