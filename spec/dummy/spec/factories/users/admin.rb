@@ -3,4 +3,6 @@
 FactoryBot.define do
   factory :users_admin, class: "Users::Admin" do
     is_admin { true }
-    association(:user, 
+    association(:user, factory: :user)
+  end
+end
