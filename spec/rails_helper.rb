@@ -1,1 +1,1 @@
-# This file is copied to spec/ when you run 
+# This file is copied to spec/ when you run 'rails generate rspec:in
