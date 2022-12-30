@@ -6,4 +6,4 @@ require 'pry'
 
 ENV['RAILS_ENV'] ||= 'test'
 
-req
+require File.expand_path('dummy/c
