@@ -13,4 +13,4 @@ require 'rspec/rails'
 
 RSpec.configure do |config|
   config.include Stockpot::Engine.routes.url_helpers
-  co
+  config.use_transactional_fixtures = 
