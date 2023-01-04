@@ -12,4 +12,5 @@ abort("The Rails environment is running in production mode!") if Rails.env.produ
 require 'rspec/rails'
 
 RSpec.configure do |config|
-  config.include 
+  config.include Stockpot::Engine.routes.url_helpers
+  co
