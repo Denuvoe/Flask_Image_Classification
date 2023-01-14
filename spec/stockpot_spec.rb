@@ -2,4 +2,5 @@
 
 RSpec.describe Stockpot do
   it "has a version number" do
-    expect(describ
+    expect(described_class::VERSION).to be_a String
+    expect(
