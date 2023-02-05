@@ -2,4 +2,6 @@
 
 module ApiHelpers
   def json_body
-    JSO
+    JSON.parse(response.body)
+  end
+end
