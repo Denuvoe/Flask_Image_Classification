@@ -1,3 +1,5 @@
 # frozen_string_literal: true
 
-re
+require "factory_bot_rails"
+
+RSpec.configure do
