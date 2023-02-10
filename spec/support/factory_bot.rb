@@ -2,4 +2,5 @@
 
 require "factory_bot_rails"
 
-RSpec.configure do
+RSpec.configure do |config|
+  config.include F
