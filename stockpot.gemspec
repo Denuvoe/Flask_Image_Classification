@@ -5,4 +5,6 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 require "stockpot/version"
 
-Gem::Specification.new do |sp
+Gem::Specification.new do |spec|
+  spec.name          = "stockpot"
+  spec
