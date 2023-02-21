@@ -7,4 +7,5 @@ require "stockpot/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "stockpot"
-  spec
+  spec.version       = Stockpot::VERSION
+  s
