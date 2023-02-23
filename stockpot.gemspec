@@ -8,4 +8,4 @@ require "stockpot/version"
 Gem::Specification.new do |spec|
   spec.name          = "stockpot"
   spec.version       = Stockpot::VERSION
-  s
+  spec.authors       = [ "Jayson Smit
