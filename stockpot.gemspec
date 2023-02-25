@@ -9,4 +9,4 @@ Gem::Specification.new do |spec|
   spec.name          = "stockpot"
   spec.version       = Stockpot::VERSION
   spec.authors       = [ "Jayson Smith", "Brian Herman", "Derek Campbell", "Victor Santana" ]
-  spe
+  spec.email         = [ "gh@nes.33mail.com",
