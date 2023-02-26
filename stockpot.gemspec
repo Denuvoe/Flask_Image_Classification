@@ -11,4 +11,4 @@ Gem::Specification.new do |spec|
   spec.authors       = [ "Jayson Smith", "Brian Herman", "Derek Campbell", "Victor Santana" ]
   spec.email         = [ "gh@nes.33mail.com", "victorfrank.santanalugo@gmail.com" ]
 
-  spec.summary       = "Mak
+  spec.summary       = "Makes setting up test data in your Rails da
