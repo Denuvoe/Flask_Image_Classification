@@ -13,4 +13,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = "Makes setting up test data in your Rails database from an external resource easier."
   spec.description   = "Exposes a few end points from your app, easily enabling CRUD actions on your database that you can utilize from things like a standalone test suite to set up state. (think: Cypress, Cucumber, etc.)"
-  spec.homepage      = "https://github.com/Freshly/stockpot
+  spec.homepage      = "https://github.com/Freshly/stockpot"
+  spec.license       = "MIT"
+
+  spec.metada
