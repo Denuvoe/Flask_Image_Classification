@@ -17,4 +17,4 @@ Gem::Specification.new do |spec|
   spec.license       = "MIT"
 
   spec.metadata["homepage_uri"] = spec.homepage
-  spe
+  spec.metadata["source_code_uri"] = spec.homepage
