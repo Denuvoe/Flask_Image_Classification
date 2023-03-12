@@ -16,4 +16,5 @@ Gem::Specification.new do |spec|
   spec.homepage      = "https://github.com/Freshly/stockpot"
   spec.license       = "MIT"
 
-  spec.metada
+  spec.metadata["homepage_uri"] = spec.homepage
+  spe
