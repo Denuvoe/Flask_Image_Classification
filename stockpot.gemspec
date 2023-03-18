@@ -20,4 +20,4 @@ Gem::Specification.new do |spec|
   spec.metadata["source_code_uri"] = spec.homepage
   spec.metadata["changelog_uri"] = "https://github.com/Freshly/stockpot/blob/master/CHANGELOG.md"
 
-  spec.files 
+  spec.files = Dir["{app,config,lib}/**/*", "MIT-LICENSE"
