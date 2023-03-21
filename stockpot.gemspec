@@ -24,4 +24,5 @@ Gem::Specification.new do |spec|
   spec.require_paths = "lib"
 
   spec.add_dependency "rails", "~> 6.1.4"
-  spec.add_dependenc
+  spec.add_dependency "factory_bot_rails", "~> 6.2.0"
+  spec
