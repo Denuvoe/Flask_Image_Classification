@@ -25,4 +25,5 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency "rails", "~> 6.1.4"
   spec.add_dependency "factory_bot_rails", "~> 6.2.0"
-  spec.add_dependency "database_cleaner-active
+  spec.add_dependency "database_cleaner-active_record", "~> 2.0.1"
+  spec.add_dependen
