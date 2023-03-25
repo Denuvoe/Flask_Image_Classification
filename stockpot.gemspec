@@ -28,4 +28,6 @@ Gem::Specification.new do |spec|
   spec.add_dependency "database_cleaner-active_record", "~> 2.0.1"
   spec.add_dependency "database_cleaner-redis", "~> 2.0.0"
   spec.add_dependency "redis", "~> 4.4.0"
-  spec.add_dependency "timecop", "~> 0.9.4
+  spec.add_dependency "timecop", "~> 0.9.4"
+
+  spec.add_development_dependency "pry-
