@@ -30,4 +30,5 @@ Gem::Specification.new do |spec|
   spec.add_dependency "redis", "~> 4.4.0"
   spec.add_dependency "timecop", "~> 0.9.4"
 
-  spec.add_development_dependency "pry-
+  spec.add_development_dependency "pry-byebug", "~> 3.9"
+  spec.add_development_d
