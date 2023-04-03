@@ -37,4 +37,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "spicerack-styleguide", ">= 0.26.0.4"
   spec.add_development_dependency "shoulda-matchers", "~> 5.0.0"
   spec.add_development_dependency "simplecov", "~> 0.21.2"
-  spec.add_developme
+  spec.add_development_dependency "pg", "~> 1.2.3"
+end
